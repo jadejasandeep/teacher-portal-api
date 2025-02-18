@@ -2,9 +2,13 @@
 
 # Technologies Used
 .NET 8: Framework for building cross-platform applications with the latest features and improvements.
+
 Entity Framework (EF) Core: ORM (Object-Relational Mapper) for database operations using the Code First approach.
+
 SQL Server: Relational database for storing and retrieving data.
+
 JWT (JSON Web Token): For secure user authentication and session management.
+
 ASP.NET Core: Web framework for building the API.
 
 # Prerequisites
