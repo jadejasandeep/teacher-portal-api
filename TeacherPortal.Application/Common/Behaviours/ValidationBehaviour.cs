@@ -1,12 +1,13 @@
 ﻿using FluentValidation;
 using MediatR;
 using Microsoft.Extensions.Logging;
+using System.Diagnostics.CodeAnalysis;
 using TeacherPortal.Application.Common.Extensions;
-using TeacherPortal.Application.Common.Interfaces;
 using TeacherPortal.Application.Common.Models;
 
 namespace TeacherPortal.Application.Common.Behaviours
 {
+    [ExcludeFromCodeCoverage]
     public class ValidationBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
         where TRequest :  IRequest<TResponse>
     {

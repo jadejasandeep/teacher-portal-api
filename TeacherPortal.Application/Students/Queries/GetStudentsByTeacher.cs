@@ -32,7 +32,7 @@ namespace TeacherPortal.Application.Students.Queries
                     FirstName = s.FirstName,
                     LastName = s.LastName,
                     Email = s.Email
-                }).AsNoTracking().PaginatedListAsync(request.PageNumber, request.PageSize, 10, cancellationToken);
+                }).AsNoTracking().PaginatedListAsync(request.PageNumber, request.PageSize, 100, cancellationToken);// Currently marking default page size to 100 as frontend has no paginamtion handling currently
 
             return ApiResponse<PaginatedList<StudentDTO>>.Success(students, "Students fetched successfully");
         }

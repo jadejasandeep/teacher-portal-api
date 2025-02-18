@@ -40,7 +40,7 @@ namespace TeacherPortal.Tests.CommandHandlerTests
             var teacher = new Teacher
             {
                 Username = "newtestuser",
-                PasswordHash = "newhashedpassword",
+                PasswordHash = "$2a$11$W/XDafUgVtFPFZ.MSLX1quX20LmIoALHXojk/JAy/Qr9Nkd6Iej72",
                 Email="sample@email.com",
                 FirstName="test",
                 LastName="user"
@@ -51,7 +51,7 @@ namespace TeacherPortal.Tests.CommandHandlerTests
             var request = new Login
             {
                 Username = "newtestuser",
-                Password = "newhashedpassword"
+                Password = "Password123"
             };
 
             // Act

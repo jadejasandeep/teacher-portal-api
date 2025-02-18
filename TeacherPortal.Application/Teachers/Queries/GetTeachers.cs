@@ -1,5 +1,4 @@
 ﻿using MediatR;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TeacherPortal.Application.Common.Extensions;
 using TeacherPortal.Application.Common.Interfaces;
@@ -33,7 +32,7 @@ namespace TeacherPortal.Application.Teachers.Queries
                 Name = t.FirstName+" "+t.LastName,
                 Email = t.Email,
                 Username = t.Username
-            }).AsNoTracking().PaginatedListAsync(request.PageNumber, request.PageSize,10,cancellationToken);
+            }).AsNoTracking().PaginatedListAsync(request.PageNumber, request.PageSize,100,cancellationToken);// Currently marking default page size to 100 as frontend has no paginamtion handling currently
             return ApiResponse<PaginatedList<TeacherDTO>>.Success(teachers, "Teachers retrived successfully");
         }
     }
